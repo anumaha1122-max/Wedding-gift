@@ -1,0 +1,37 @@
+{
+  "couple": {
+    "groom": "Yesu",
+    "bride": "Sridevi"
+  },
+  "hero": {
+    "eyebrow": "Wedding Surprise",
+    "title": "A Journey of Love",
+    "highlight": "& Memories",
+    "subtitle": "Seven beautiful years of love, care, fights, smiles, dreams and togetherness — now becoming forever in marriage."
+  },
+  "heroImages": [
+    "/images/hero-bg.svg",
+    "/images/gallery-1.svg",
+    "/images/gallery-2.svg",
+    "/images/gallery-3.svg"
+  ],
+  "stats": {
+    "years": "7+",
+    "memories": "100+",
+    "blessings": "∞"
+  },
+  "musicPlaylist": [
+    {
+      "title": "Perfect",
+      "subtitle": "Wedding Love Song",
+      "src": "/audio/love-song.mp3",
+      "cover": "/images/music-cover.svg"
+    },
+    {
+      "title": "Forever Love",
+      "subtitle": "Soft Romantic BGM",
+      "src": "/audio/final-blessing.mp3",
+      "cover": "/images/final-gift.svg"
+    }
+  ]
+}

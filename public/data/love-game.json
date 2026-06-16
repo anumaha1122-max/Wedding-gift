@@ -1,0 +1,61 @@
+{
+  "title": "7 Hearts Love Quest",
+  "subtitle": "Complete every stage and unlock Yesu & Sridevi’s secret blessing.",
+  "quiz": [
+    {
+      "question": "Which year did Yesu and Sridevi's love story start?",
+      "options": ["2017", "2018", "2019", "2020"],
+      "answer": "2017"
+    },
+    {
+      "question": "What is this website made for?",
+      "options": ["Birthday", "Wedding Surprise", "College Event", "Trip"],
+      "answer": "Wedding Surprise"
+    }
+  ],
+  "guessYear": [
+    {
+      "image": "/images/year-2017.svg",
+      "question": "Which year was this memory?",
+      "options": ["2017", "2018", "2019", "2020"],
+      "answer": "2017"
+    },
+    {
+      "image": "/images/year-2024.svg",
+      "question": "Which year did love convert into marriage?",
+      "options": ["2021", "2022", "2023", "2024"],
+      "answer": "2024"
+    }
+  ],
+  "memoryMatch": [
+    {
+      "id": 1,
+      "image": "/images/match-1.svg",
+      "label": "Love"
+    },
+    {
+      "id": 2,
+      "image": "/images/match-2.svg",
+      "label": "Smile"
+    },
+    {
+      "id": 3,
+      "image": "/images/match-3.svg",
+      "label": "Ring"
+    }
+  ],
+  "wheel": [
+    "Send one blessing",
+    "Open one memory",
+    "Say Happy Married Life",
+    "Play the love song",
+    "Share one sweet word"
+  ],
+  "scratchBlessings": [
+    "Forever Together",
+    "Made for Each Other",
+    "Love Converted Into Marriage",
+    "Happy Married Life"
+  ],
+  "finalMessage": "Seven years of love is now becoming forever. Yesu and Sridevi are made for each other."
+}
