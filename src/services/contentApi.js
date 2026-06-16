@@ -36,7 +36,7 @@ export function loadFinalGift() {
     title: "Love Converted Into Marriage",
     subtitle: "A final surprise for Yesu & Sridevi",
     message:
-      "Seven years of love are now becoming forever. This is a digital gift filled with memories, blessings and love.",
+      "2019 to 2026 love are now becoming forever. This is a digital gift filled with memories, blessings and love.",
     imageUrl: "",
     videoUrl: "",
     audioUrl: "",

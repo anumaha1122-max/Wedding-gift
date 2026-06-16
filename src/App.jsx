@@ -32,6 +32,83 @@ import {
 } from "./services/contentApi";
 import LoveJourneyGame from "./components/LoveJourneyGame.jsx";
 
+function LoveJourneyStats({ startDate = "2019-01-01T00:00:00" }) {
+  const [journeyTime, setJourneyTime] = useState({
+    years: 0,
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const calculateJourneyTime = () => {
+      const start = new Date(startDate);
+      const now = new Date();
+
+      if (Number.isNaN(start.getTime())) {
+        return;
+      }
+
+      let years = now.getFullYear() - start.getFullYear();
+
+      const anniversaryThisYear = new Date(start);
+      anniversaryThisYear.setFullYear(start.getFullYear() + years);
+
+      if (now < anniversaryThisYear) {
+        years -= 1;
+      }
+
+      const lastAnniversary = new Date(start);
+      lastAnniversary.setFullYear(start.getFullYear() + years);
+
+      const difference = now.getTime() - lastAnniversary.getTime();
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / (1000 * 60)) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+
+      setJourneyTime({
+        years: Math.max(years, 0),
+        days: Math.max(days, 0),
+        hours: Math.max(hours, 0),
+        minutes: Math.max(minutes, 0),
+        seconds: Math.max(seconds, 0),
+      });
+    };
+
+    calculateJourneyTime();
+    const timer = setInterval(calculateJourneyTime, 1000);
+    return () => clearInterval(timer);
+  }, [startDate]);
+
+  return (
+    <div className="love-timer-container">
+      <div className="love-timer-box love-years">
+        <strong>{journeyTime.years}+</strong>
+        <span>Years</span>
+      </div>
+      <div className="love-timer-box love-days">
+        <strong>{journeyTime.days}</strong>
+        <span>Days</span>
+      </div>
+      <div className="love-timer-box love-hours">
+        <strong>{journeyTime.hours}</strong>
+        <span>Hours</span>
+      </div>
+      <div className="love-timer-box love-minutes">
+        <strong>{journeyTime.minutes}</strong>
+        <span>Minutes</span>
+      </div>
+      <div className="love-timer-box love-seconds">
+        <strong>{journeyTime.seconds}</strong>
+        <span>Seconds</span>
+      </div>
+    </div>
+  );
+}
+
 const FALLBACK_IMAGE = "/images/fallback.svg";
 
 function normalizeType(type = "") {
@@ -140,7 +217,7 @@ function Sidebar({ site, open, onClose }) {
 
         <div className="sidebar-note">
           <Sparkles size={18} />
-          Seven years of love becoming forever.
+          2019 to 2026 love becoming forever.
         </div>
       </aside>
 
@@ -176,7 +253,7 @@ function HeroSection({ site, couple }) {
 
         <p className="hero-text">
           {site?.hero?.subtitle ||
-            "Seven beautiful years of love, care, fights, smiles, dreams and togetherness — now becoming forever in marriage."}
+            "2019 to 2026 love, care, fights, smiles, dreams and togetherness — now becoming forever in marriage."}
         </p>
 
         <div className="hero-actions">
@@ -188,20 +265,9 @@ function HeroSection({ site, couple }) {
           </a>
         </div>
 
-        <div className="hero-stats">
-          <div>
-            <strong>{site?.stats?.years || "7+"}</strong>
-            <span>Years</span>
-          </div>
-          <div>
-            <strong>{site?.stats?.memories || "100+"}</strong>
-            <span>Memories</span>
-          </div>
-          <div>
-            <strong>{site?.stats?.blessings || "∞"}</strong>
-            <span>Blessings</span>
-          </div>
-        </div>
+          <LoveJourneyStats
+            startDate={site?.loveStartDate}
+          />
       </div>
 
       <div className="hero-visual glass-card">
@@ -623,7 +689,7 @@ function TimelineSection() {
     <section className="timeline-section" id="timeline">
       <div className="section-title">
         <p className="eyebrow">Love Journey</p>
-        <h2>7 Years Love Journey</h2>
+        <h2>2019 – 2026 Love Journey</h2>
         <p>From first meeting to forever marriage.</p>
       </div>
 
