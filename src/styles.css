@@ -706,13 +706,6 @@ video {
   position: absolute;
   inset: 0;
   z-index: 4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 24px;
-  text-align: center;
 }
 
 .preview-voice-heart,
@@ -966,12 +959,17 @@ video {
 }
 
 .timeline-list {
-  display: grid;
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center cards horizontally */
+  gap: 24px;
+  padding: 12px 0;
 }
 
 .timeline-card {
+  max-width: 720px;
   width: 100%;
+  margin: 0 auto;
   border-radius: 26px;
   padding: 16px;
   display: grid;
@@ -996,7 +994,7 @@ video {
 }
 
 .timeline-image {
-  height: 112px;
+  height: 300px;
   border-radius: 18px;
   overflow: hidden;
   background: #070712;
@@ -1006,6 +1004,34 @@ video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Carousel arrow styling */
+.timeline-image-carousel {
+  position: relative;
+}
+
+.timeline-image-carousel .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 79, 135, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+}
+.timeline-image-carousel .carousel-arrow.left { left: 12px; }
+.timeline-image-carousel .carousel-arrow.right { right: 12px; }
+
+@media (max-width: 600px) {
+  .timeline-image { height: 200px; }
 }
 
 .timeline-card h3 {
