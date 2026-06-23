@@ -22,6 +22,8 @@ import {
   Upload,
   Volume2,
   X,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import {
   loadFinalGift,
@@ -685,6 +687,8 @@ function TimelineSection() {
     loadTimeline().then((data) => setTimeline(Array.isArray(data) ? data : []));
   }, []);
 
+  const closeModal = () => setSelected(null);
+
   return (
     <section className="timeline-section" id="timeline">
       <div className="section-title">
@@ -698,13 +702,29 @@ function TimelineSection() {
           <button key={item.id || item.year} className="timeline-card glass-card" onClick={() => setSelected(item)}>
             <div className="timeline-year">{item.year}</div>
             <div className="timeline-image">
-              <img
-                src={getAsset(item.image)}
-                alt={item.title}
-                onError={(e) => {
-                  e.currentTarget.src = FALLBACK_IMAGE;
-                }}
-              />
+              {Array.isArray(item.images) ? (
+                <div className="timeline-images">
+                  {item.images.map((imgSrc, idx) => (
+                    <img
+                      key={idx}
+                      src={getAsset(imgSrc)}
+                      alt={`${item.title} ${idx}`}
+                      onError={(e) => {
+                        e.currentTarget.src = FALLBACK_IMAGE;
+                      }}
+                      className="timeline-image-thumb"
+                    />
+                  ))}
+                </div>
+              ) : (
+                <img
+                  src={getAsset(item.image)}
+                  alt={item.title}
+                  onError={(e) => {
+                    e.currentTarget.src = FALLBACK_IMAGE;
+                  }}
+                />
+              )}
             </div>
             <div>
               <h3>{item.title}</h3>
@@ -716,14 +736,55 @@ function TimelineSection() {
       </div>
 
       {selected && (
-        <MediaPreviewModal
-          item={{ ...selected, type: selected.mediaUrl ? selected.type || "Videos" : "Photos", mediaUrl: selected.mediaUrl || selected.image }}
-          index={0}
-          onClose={() => setSelected(null)}
-          label="Timeline"
-        />
+        <TimelineImageModal item={selected} onClose={closeModal} />
       )}
     </section>
+  );
+}
+
+function TimelineImageModal({ item, onClose }) {
+  const images = Array.isArray(item.images) ? item.images : [item.image];
+  const [idx, setIdx] = useState(0);
+  const total = images.length;
+
+  const prev = () => setIdx((prev) => (prev - 1 + total) % total);
+  const next = () => setIdx((prev) => (prev + 1) % total);
+
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [onClose]);
+
+  return (
+    <div className="preview-backdrop" onClick={onClose}>
+      <div className="preview-modal" onClick={(e) => e.stopPropagation()}>
+        <button className="preview-close" onClick={onClose}>×</button>
+        {total > 1 && (
+          <>
+            <button className="preview-arrow preview-left" onClick={prev}><ChevronLeft size={24} /></button>
+            <button className="preview-arrow preview-right" onClick={next}><ChevronRight size={24} /></button>
+          </>
+        )}
+        <div className="preview-image-wrap">
+          <img
+            src={getAsset(images[idx])}
+            alt={`Timeline ${item.year} image ${idx + 1}`}
+            onError={(e) => { e.currentTarget.src = FALLBACK_IMAGE; }}
+            className="preview-image"
+          />
+        </div>
+        <div className="preview-info">
+          <p className="preview-small">Year {item.year}</p>
+          <h3>{item.title}</h3>
+          <span>{idx + 1} / {total}</span>
+        </div>
+      </div>
+    </div>
   );
 }
 

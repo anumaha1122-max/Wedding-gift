@@ -4,55 +4,55 @@
     "year": "2019",
     "title": "First Meeting",
     "description": "The first moment that slowly became the beginning of a beautiful love story.",
-    "image": "/images/year-2019.svg"
+    "images": ["/images/profile.png", "/images/year-2019.svg"]
   },
   {
     "id": 2,
     "year": "2020",
     "title": "Friendship Became Love",
     "description": "Small talks, smiles and care started turning into a deeper bond.",
-    "image": "/images/year-2020.svg"
+    "images": ["/images/profile.png", "/images/year-2020.svg"]
   },
   {
     "id": 3,
     "year": "2021",
     "title": "First Trip Together",
     "description": "A year filled with memories, photos and unforgettable moments.",
-    "image": "/images/year-2021.svg"
+    "images": ["/images/profile.png", "/images/year-2021.svg"]
   },
   {
     "id": 4,
     "year": "2022",
     "title": "Standing Together",
     "description": "Through every situation, their love became stronger and more meaningful.",
-    "image": "/images/year-2022.svg"
+    "images": ["/images/profile.png", "/images/year-2022.svg"]
   },
   {
     "id": 5,
     "year": "2023",
     "title": "Dreams & Future Plans",
     "description": "They started dreaming about their future together with hope and trust.",
-    "image": "/images/year-2023.svg"
+    "images": ["/images/profile.png", "/images/year-2023.svg"]
   },
   {
     "id": 6,
     "year": "2024",
     "title": "Family Blessings",
     "description": "The love story started becoming a family blessing.",
-    "image": "/images/year-2024.svg"
+    "images": ["/images/profile.png", "/images/year-2024.svg"]
   },
   {
     "id": 7,
     "year": "2025",
     "title": "Engagement Memories",
     "description": "The promise became stronger with happy smiles and blessings.",
-    "image": "/images/year-2025.svg"
+    "images": ["/images/profile.png", "/images/year-2025.svg"]
   },
   {
     "id": 8,
     "year": "2026",
     "title": "Love Converted Into Marriage",
     "description": "2019 to 2026 love is now becoming forever.",
-    "image": "/images/year-2026.svg"
+    "images": ["/images/profile.png", "/images/year-2026.svg"]
   }
 ]
