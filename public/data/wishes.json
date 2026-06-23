@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Mom",
+    "relation": "Mother",
+    "type": "VOICE",
+    "message": "God bless Yesu and Sridevi with a happy married life filled with love, patience and blessings.",
+    "image": "/images/memory-mom.svg",
+    "mediaUrl": "/audio/wishes/mom-voice.mp3",
+    "date": "Wedding Day"
+  },
+  {
+    "id": 2,
+    "name": "Best Friend",
+    "relation": "Friend",
+    "type": "VIDEO",
+    "message": "You both are made for each other. Wishing you a lifetime of happiness and smiles.",
+    "image": "/images/memory-video.svg",
+    "mediaUrl": "/videos/wishes/friend-wish.mp4",
+    "date": "Wedding Day"
+  },
+  {
+    "id": 3,
+    "name": "Sister",
+    "relation": "Family",
+    "type": "PHOTO",
+    "message": "Wishing Yesu and Sridevi a beautiful life filled with love and blessings.",
+    "image": "/images/memory-friend.svg",
+    "mediaUrl": "/images/memory-friend.svg",
+    "date": "Wedding Day"
+  },
+  {
+    "id": 4,
+    "name": "Cousin",
+    "relation": "Family",
+    "type": "TEXT",
+    "message": "2019 to 2026 love is now becoming forever. Congratulations Yesu and Sridevi.",
+    "image": "",
+    "mediaUrl": "",
+    "date": "Wedding Day"
+  }
+]
