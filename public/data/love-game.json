@@ -15,13 +15,13 @@
   ],
   "guessYear": [
     {
-      "image": "/images/year-2019.svg",
+      "image": "/images/2019.png",
       "question": "Which year was this memory?",
       "options": ["2017", "2018", "2019", "2020"],
       "answer": "2019"
     },
     {
-      "image": "/images/year-2024.svg",
+      "image": "/images/2026.jpeg",
       "question": "Which year did love convert into marriage?",
       "options": ["2021", "2022", "2023", "2024"],
       "answer": "2024"
@@ -30,17 +30,17 @@
   "memoryMatch": [
     {
       "id": 1,
-      "image": "/images/match-1.svg",
+      "image": "/images/2023.jpeg",
       "label": "Love"
     },
     {
       "id": 2,
-      "image": "/images/match-2.svg",
+      "image": "/images/2020-1.jpeg",
       "label": "Smile"
     },
     {
       "id": 3,
-      "image": "/images/match-3.svg",
+      "image": "/images/2019.png",
       "label": "Ring"
     }
   ],
