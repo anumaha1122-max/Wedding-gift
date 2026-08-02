@@ -11,22 +11,22 @@
   },
   {
     "id": 2,
-    "name": "Best Friend",
+    "name": "MBA Friends",
     "relation": "Friend",
     "type": "VIDEO",
     "message": "You both are made for each other. Wishing you a lifetime of happiness and smiles.",
-    "image": "/images/memory-video.svg",
-    "mediaUrl": "/videos/wishes/friend-wish.mp4",
+    "image": "/images/memory-1.svg",
+    "mediaUrl": "/videos/wishes/wish.mp4",
     "date": "Wedding Day"
   },
   {
     "id": 3,
-    "name": "Sister",
-    "relation": "Family",
-    "type": "PHOTO",
+    "name": "Pooja",
+    "relation": "Sister",
+    "type": "VIDEO",
     "message": "Wishing Yesu and Sridevi a beautiful life filled with love and blessings.",
     "image": "/images/memory-friend.svg",
-    "mediaUrl": "/images/memory-friend.svg",
+    "mediaUrl": "/videos/wishes/wish-1.mp4",
     "date": "Wedding Day"
   },
   {

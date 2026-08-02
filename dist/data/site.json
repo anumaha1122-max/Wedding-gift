@@ -10,10 +10,10 @@
     "subtitle": "2019 to 2026 love, care, fights, smiles, dreams and togetherness — now becoming forever in marriage."
   },
   "heroImages": [
-    "/images/hero-bg.svg",
-    "/images/gallery-1.svg",
-    "/images/gallery-2.svg",
-    "/images/gallery-3.svg"
+    "/images/memory-6.jpeg",
+    "/images/2024.jpeg",
+    "/images/2025.jpeg",
+    "/images/memory-3.jpeg"
   ],
   "musicPlaylist": [
     {
@@ -29,7 +29,6 @@
       "cover": "/images/final-gift.svg"
     }
   ],
-"loveStartDate": "2019-01-01T00:00:00",
-
+"loveStartDate": "2019-01-01T00:00:00"
 
 }

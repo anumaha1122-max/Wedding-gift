@@ -4,7 +4,7 @@
     "type": "Videos",
     "category": "Friends",
     "title": "College Friends Memory",
-    "image": "/images/gallery-1.svg",
+    "image": "/images/memory-1.jpeg",
     "mediaUrl": "/videos/gallery/college-memory.mp4"
   },
   {
@@ -12,21 +12,21 @@
     "type": "Photos",
     "category": "Family",
     "title": "Family Blessings",
-    "image": "/images/gallery-2.svg"
+    "image": "/images/memory-2.jpeg"
   },
   {
     "id": 3,
     "type": "Photos",
     "category": "Couple",
     "title": "Love Moment",
-    "image": "/images/gallery-3.svg"
+    "image": "/images/memory-3.jpeg"
   },
   {
     "id": 4,
     "type": "Videos",
     "category": "Friends",
     "title": "Fun Memory",
-    "image": "/images/gallery-4.svg",
+    "image": "/images/memory-4.jpeg",
     "mediaUrl": "/videos/gallery/fun-memory.mp4"
   },
   {
@@ -34,7 +34,7 @@
     "type": "Voice",
     "category": "Family",
     "title": "Love Journey Voice Memory",
-    "image": "/images/gallery-5.svg",
+    "image": "/images/memory-5.jpeg",
     "mediaUrl": "/audio/gallery/love-memory.mp3",
     "sender": "Family",
     "relation": "Blessing"
@@ -44,6 +44,13 @@
     "type": "Photos",
     "category": "Couple",
     "title": "Smile Forever",
-    "image": "/images/gallery-6.svg"
+    "image": "/images/memory-6.jpeg"
+  },
+  {
+    "id": 7,
+    "type": "Photos",
+    "category": "Couple",
+    "title": "Profile Photo",
+    "image": "/images/memory-7.jpeg"
   }
 ]
